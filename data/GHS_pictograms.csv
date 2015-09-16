@@ -1,0 +1,10 @@
+code,filename,name,hazard
+GHS01,ghs01,Exploding Bomb,Explosive
+GHS02,ghs02,Flame,Flammable
+GHS03,ghs03,Flame Over Circle,Oxidising
+GHS04,ghs04,Gas Cylinder,Gases under pressure
+GHS05,ghs05,Corrosion,Corrosive
+GHS06,ghs06,Skull and Crossbones,Acute toxicity
+GHS07,ghs07,Exclamation Mark,Health hazards
+GHS08,ghs08,Health Hazard,Chronic Health Hazards
+GHS09,ghs09,Environment,Environmental
