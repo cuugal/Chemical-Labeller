@@ -445,8 +445,8 @@ Australia</p>
 <!-- Chemical Label Creator starts here -->
 <div id="clgtabs">
 	<ul> 
-		<li><a href="./ghs.php" class="active">GHS</a></li> 
-		<li><a href="./acchs.php">ACCHS</a></li> 
+		<li><a href="./ghs.php" class="active">GHS Label Creator</a></li> 
+		<!-- section now deprecated li><a href="./acchs.php">ACCHS</a></li --> 
 		<li><a href="./instructions.html">Instructions</a></li>
 	</ul> 
 </div>
