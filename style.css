@@ -1,3 +1,38 @@
+/* For SupRDateModified.asp */
+/* For the reports header - faculty/campus/building etc */
+.suprreportheader { padding: 1px; width:98%; border: solid 1px #445c2c; font-size: 11px; border-collapse: separate;  text-align: left; }
+.suprreportheader td, .suprreportheader th { padding: 5px 25px 5px 5px; background-color: #e8ede4; color: #000; vertical-align: middle; }
+.suprreportheader th {background-color: #dfe4db; color: #000; vertical-align: middle; font-weight: bold;}
+
+a:link{color:#445c2c; /* text-decoration:none; */}
+a:hover{text-decoration:underline;}
+strong{color:#0099cc;}
+
+/* For warning message table */
+.reportwarn { padding: 1px; width:98%; border: solid 1px #445c2c; font-size: 11px; border-collapse: separate;  text-align: left; }
+.reportwarn td { padding: 1px 5px 5px 5px; background-color: #F9EDB6; color: #000; vertical-align: middle; }
+
+
+/* new styling for Hazard Information Poster */
+#main-column {
+    position: relative;
+    margin: 0 0 0 235px;
+    padding: 0;
+    width: 65%;
+    min-width: 660px;
+    max-width: 900px;
+    height: 100%;
+    background: #fff;
+    font-size: 0.80em;
+}
+#logo {
+    width: 221px;
+    float: left;
+    height: 50px;
+    margin: 10px 21px 0 2px;
+}
+
+
 #clgtabs { 
     padding:0; 
     margin:0; 
@@ -58,36 +93,832 @@
 
 
 
-#content{    
-/*testing 2/8 */
-margin: 10px 0 0 0;
-min-height: 0;
+/* Styles the EditQORA page */
+/* The Further Actions Required table styling */
+table.far { width: 90%; padding: 1px; font-size: 10pt; border: solid 1px #d4e5fe; border-collapse: separate; background-color: #fff; text-align: left; }
+table.far td { /* width: 5%; */ padding: 3px 3px 3px 3px; background-color: #edf4f6; color: #000; vertical-align: middle; }
+table.far th { text-align: left; padding: 3px 3px 3px 3px;  background-color: #cae3e8; color: #000; /* vertical-align: middle; */}
+table.far a:link {  font-weight: normal;  }
 
-	background:#EAEAEA; 
-    clear:both; 
-    font-size:12px; 
-    color:#000; 
-    padding: 10px 10px 10px 20px; 
-    font-family: Arial, Helvetica, sans-serif; 
-} 
+#wrapper #content .addAnother p{color:#dfe4db}
 
-#srchbar { 
-	position: fixed; 
-	top: 0px; 
-	left: 0px; 
-	width: 640px; 
-	height: 54px; 
-	border-bottom:1px solid #000000;
-	background-color: white; 
+/* Risk assessment rating */
+table.eq { width: auto; font-size: 10pt; font-weight: normal; text-decoration: none; width: 100%; border: solid 1px #fff;}
+table.eq tr.high { background-color: #FF9000; } /* these tr stylings are now redundant   */
+table.eq tr.medium { background-color: #FFE000; }
+table.eq tr.low { background-color: #FFFF99;}
+
+table.eq td.extreme { background-color: #FF0F00; }
+table.eq td.high { background-color: #FF9000; }
+table.eq td.medium { background-color: #FFFF00; }
+table.eq td.low { background-color: #70BF41;}
+
+table.eq td.hed { background-color: #EEEEEE; }
+table.eq td.hedalt { background-color: #edf4f6; }
+table.eq th { text-align: right; font-weight: normal; text-decoration: none; padding: 3px 3px 3px 50px;}
+table.eq td { text-align: center; padding: 3px;}
+
+/* SWMS form specifics */
+table.swms td.extreme { background-color: #FF0F00; color: #ffffff}
+table.swms td.high { background-color: #FF9000; }
+table.swms td.medium { background-color: #F5D328; }
+table.swms td.low { background-color: #70BF41;}
+table.swms .plainbox { padding: 2px; background-color: #EDF0F6; color: #000000; vertical-align: middle;}
+
+table.sortable a {text-decoration: underline;}
+
+/* Style the HRs for this page only */
+body#editqora hr { width: 50%; background-color: #BCD7DE; color: #BCD7DE; height: 1px; border: 0; margin-top: 12px; margin-bottom: 10px;}
+
+body#editqora p { background-color: #fff; color: #000; font-size: 10pt; }
+
+
+.assessinitial fieldset { /* clear: both; note that this clear causes inputs to break to left in ie5.x mac, commented out */
+  font: 10pt arial, sans-serif;
+  border: solid 1px #000;
+  padding: 10px; /* padding in fieldset support spotty in IE */
+  margin: 0; width: 660px;}
+.assessinitial fieldset legend {font-size: 10pt; font-weight: bold; color: #000; background-color: transparent; }
+.assessinitial fieldset label { display: block;  /* block float the labels to left column, set a width */
+	color: #000; background-color: #fff;
+	font-size: 10pt; text-align: right;
+	float: left; 
+	width: 120px; 
+	padding: 0; 
+	margin: 5px 0 0; /* set top margin same as form input - textarea etc. elements */ }
+.assessinitial fieldset br { clear:left; /* setting clear on inputs didn't work consistently, so brs added for degrade */ }
+
+/* Styling of  section of EditQORA  */
+table.table { border: solid 1px #d4d0c8; font-size: 9pt; background-color: #fff; width: 98%; border-collapse: separate; padding: 1px; }
+.hazardstable th { font-size: 8pt; text-align: left; text-decoration: none; font-weight: normal; 
+padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 0; margin: 0; background-color: #FFCF00; vertical-align: middle;}
+.hazardstable td { vertical-align: middle; padding: 1px; background-color: #fff; font-size: 8pt; }
+
+.hazardstable a, .hazardstable a:hover { background-color: /* #edf4f6;*/ #fff; text-align: left; text-decoration: none; color: #000; font-weight: normal; display: inline; }
+.hazardstable a:hover { background-color: #cae3e8; }
+
+/* Styling for the Further Actions Required section */
+
+
+/* end of EditQORA page styling */
+/* ---------------------------- */
+
+
+
+
+
+
+/*.sortable table JS */
+table.sortable thead a:hover { color: red;}
+table.sortable thead a:link { text-decoration: none; color: #000;}
+table.sortable thead a:visited { text-decoration: none; color: #000; }
+table.sortable thead th { text-align: center; }
+
+/* myqora styling is used at: search criteria box for Supervisor login;   */
+table.myqora { padding: 1px; border: solid 1px#d4e5fe; font-size: 10pt; border-collapse: separate; background-color: #445c2c; text-align: left; width: 70%;}
+table.myqora thead th {padding: 5px; font-size: 11pt; font-weight: bold; color: #000; background-color: #dfe4db; text-align: center; vertical-align: middle;}
+.myqora th {padding-left: 9px; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; font-weight: 150; color: #000; background-color: #dfe4db; text-align: left; vertical-align: middle;}
+.myqora td {text-align: left; vertical-align: middle; padding: 5px; background-color: #e8ede4; color: #000;}
+/*.myqora input[type="button"],*/
+.myqora input[type="text"] { font-size: 10pt; font-weight: normal; border: solid 1px #ffcf00; text-align: left; margin: 3px; color: #000; background-color: #f8e9ad; }
+.myqora td.submitclear {text-align: center; }
+
+
+
+
+/* Styles the QORA creation page  */
+table.cqoraSup_1 { border: none; background-color: #edf4f6; width: 100%; }
+table.cqoraSup_1 td { padding: 5px; border: none; background-color: transparent; color: #000; }
+table.cqoraSup_1 th { padding: 5px; border: none; background-color: #ffcf00; }
+
+.cqoraSup_sectionheading { background-color: #12fff9; font-size: 10pt; color: #000;}
+
+/* Styles the table for the cqoraSup.asp (create a new QORA) file */
+table.cqoraSup { margin-bottom: 5px; padding: 0; width: 80%; background-color: #edf4f6; color: #000; border-collapse: separate; border: solid 1px #bcd7de; }
+table.cqoraSup hr { background-color: #bcd7de; color: #bcd7de; height: 1px; border: 0; margin-top: 10px; margin-bottom: 10px; }
+table.cqoraSup th { text-align: left; font-size: 10pt; font-weight: 100; color: #000; background-color: #bcd7de; padding: 3px; }
+table.cqoraSup  td { color: #000; background-color: #edf4f6; padding: 3px; text-align: left; }
+table.cqoraSup  input[type="button"],
+table.cqoraSup input[type="submit"],
+table.cqoraSup input[type="reset"],
+table.cqoraSup input[type="radio"],
+table.cqoraSup input[type="password"],
+table.cqoraSup input[type="text"],
+table.cqoraSup select { font-size: 10pt; font-weight: normal; border: solid 1px #ffcf00; text-align: left; margin: 3px; color: #000; background-color: #f8e9ad; }
+
+/* Start of the LocationSup.asp form items styling */
+/* ----------------------------------------------- */
+div.locationsup {vertical-align: top; padding: 5px; margin: 0;}
+div.locationsup fieldset { /* clear: both; note that this clear causes inputs to break to left in ie5.x mac, commented out */
+  font: 10pt arial, sans-serif;
+  border: solid 1px #000;
+  padding: 10px; /* padding in fieldset support spotty in IE */
+  margin: 0; width: 40%; }
+
+div.locationsup fieldset legend {font-size: 10pt; font-weight: bold; color: #000; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+
+div.locationsup fieldset label { display: inline;  /* block float the labels to left column, set a width */
+	color: #000; background-color: #fff;
+	font-size: 10pt; 
+	float: left; 
+	width: auto; 
+/*	padding: 0; */
+/*	margin: 5px 0 0;  set top margin same as form input - textarea etc. elements */
+	margin: 5px 0 5px 25px;
+	text-align: right; }
+
+div.locationsup fieldset input[type="select"] { 
+	width: 300px; /* set width of form elements to auto-size, otherwise watch for wrap on resize */
+	margin: 5px 0 0 250px;
+	text-align: left; color: blue; background-color: red;
+	float: right; position: relative; display: block; }
+/* ---------------------------------- */
+/* End of the LocationSup.asp styling */
+
+
+table#locationsup { margin: 0; padding: 0; width: 80%; background-color: #edf4f6; color: #000; border-collapse: separate; border: solid 1px #bcd7de; width: 40%; }
+table#locationsup hr { background-color: #bcd7de; color: #bcd7de; height: 1px; border: 0; margin-top: 10px; margin-bottom: 10px; }
+table#locationsup th { text-align: left; /* width: 30%; */ font-size: 10pt; font-weight: 100; color: #000; background-color: #edf4f6; padding: 3px; }
+table#locationsup td { color: #000; background-color: #edf4f6; padding: 3px; text-align: left; }
+table#locationsup input[type="button"],
+table#locationsup input[type="submit"],
+table#locationsup input[type="reset"],
+table#locationsup input[type="radio"],
+table#locationsup input[type="password"],
+table#locationsup input[type="text"],
+table#locationsup select { font-size: 10pt; font-weight: normal; border: solid 1px #ffcf00; text-align: left; margin: 3px; color: #000; background-color: #f8e9ad; }
+
+/* This is used to style the reports from SupRlevel.asp */
+.suprlevel { width: 99%; padding: 1px; border: solid 1px #445c2c; font-size: 11px; border-collapse: separate; background-color: #fff; text-align: left;}
+.suprlevel caption { font-size: 11px; text-align: left; color: #fff; padding-left: 2px; padding-bottom: 0; margin-bottom: 2px; }
+.suprlevel strong { font-weight: bolder; }
+/* Width of the header columns for the first instance of this table */
+.suprlevel thead th {text-align: left;}
+
+/* Width of the header columns */
+/* .suprlevel th.haztask { width: 40%; } */
+.suprlevel th.location { width: 37%; }
+.suprlevel .centrecontent { width: 9%; text-align: center; }
+.suprlevel td { padding: 5px; background-color: #e8ede4; color: #000; vertical-align: top; }
+.suprlevel td.blank { background-color: #fff; }
+.suprlevel th { padding: 5px; color: #000; background-color: #dfe4db; text-align: left; vertical-align: middle; }
+.suprlevel td.centered { text-align: center;}
+.suprlevel tbody tr:hover td, .suprlevel tbody tr:hover th {background-color: #fff6cb;}
+
+
+/* Styling of SupReport.asp table */
+table#supreport { border: solid 1px #fff; border-collapse: separate; background-color: #fff; text-align: left; width: 70%;}
+#supreport strong { font-weight: bolder; }
+#supreport td, #supreport td.reportno { text-align: left; vertical-align: middle; padding: 3px; background-color: #edf4f6; color: #000; }
+#supreport td.reportno { text-align: center; vertical-align: middle; width: 15%; }
+#supreport td.reporttype { background-color: #e9cef0; }
+#supreport th { padding: 3px; font-weight: 150; color: #000; background-color: #cae3e8; text-align: center; vertical-align: middle; }
+#supreport tr { background-color: #c0c0c0; }
+
+table#supreport input[type="button"],
+table#supreport input[type="submit"],
+table#supreport input[type="reset"],
+table#supreport input[type="radio"],
+table#supreport input[type="password"],
+table#supreport input[type="text"],
+table#supreport select { font-size: 10pt; font-weight: normal; border: solid 1px #ffcf00; text-align: left; margin: 3px; color: #000; background-color: #f8e9ad; }
+table#supreport td.submitclear {text-align: center; }
+
+
+
+
+
+
+
+/* AMENDED ELEMENTS FROM THE EHS.CSS STYLESHEET */
+/* body */
+html{
+	background: #ffffff;
+	}
+	
+	frame html{background:none;}
+	
+body { color: #000; 
+background-color: #fff; 
+font-family: Verdana, Arial,  Helvetica, sans-serif; 
+margin: 0; 
+padding: 0; 
+min-width: 100%; 
 }
 
-#srchbody { 
-	margin-top: 70px;
+
+/* text-align: center; } */
+
+body.searchresultsfrommenu { color: #000; background-color: #eee; font-family: Verdana, Arial, sans-serif; 
+padding: 5px 10px 10px 9px; margin-bottom: 0; text-align: center; }
+
+body#printpreview { width: 100%; color: #000; background-color: #fff; font-family: Verdana, Arial, sans-serif; padding: 2px; }
+
+/* make this solid 0099cc  whit white font */
+/* top bar */
+/* #wrappertop{background:#eaede4 url(images/top.png) no-repeat scroll left top;} */
+#wrappertop{background:#0099cc ;}
+
+/* wrapper */
+#wrapper { color:#ffffff; background: #fff) url(images/bottomx.png) no-repeat scroll left top; margin: 0 auto 0 auto; width: 100%; text-align: left; }
+#wrapperform {
+    background: #ffffff;
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+}
+
+
+
+/* ORR-heading */
+#orrheading { background:#ffffff url(images/top.png) no-repeat scroll left top; /* width: 545px;  min-width: 750px;*/ color: #000; height: 100px; margin-top: 1px; padding-top: 0; padding-left: 5px; padding-bottom: 0; }
+#orrheading img { position: relative; float: right; margin: 0; padding: 0; }
+#orrheading h1 { color: #0099cc;  font-size: 17pt; font-weight: bold; line-height: 17pt; margin: 0; top: 20px; padding: 40px 0 0 7px; }
+
+/* content */
+#content { color:#004d66; font-size: 10pt; padding: 5px 10px 10px 9px; margin-bottom: 0; background-color:#e8ede4 transparent;/* border-bottom: solid 1px #09c; */ }
+
+/* styles within the content DIV - top headings */
+#content p { font-size: 10pt; color: #4C8080; }
+#content h1 { font-size: 13pt; color: #fff;  }
+#content h1.pagetitle { font-size: 12pt; font-weight: bold; line-height: 10pt; margin-top: 0; padding-top: 2px; padding-left: 10px; background-image: url(images/pageheading_tile.gif); background-repeat: repeat-y; }
+#content h2 { font-size: 12pt; color: #0099cc;  }
+#content strong{color:#000;}
+#content hr { background-color: #004d66; color: #004d66; height: 1px; border: 0; margin-top: 5px; margin-bottom: 5px; padding: 0;}
+
+/* SupervisorMenu.htm table styling */
+.loginlist {margin: 10px 0 0 0; padding: 0; }
+.loginlist ul { margin: 0; padding: 0; list-style-type: none; text-align: center; }
+.loginlist ul li { display: inline; }
+.loginlist ul li a { text-decoration: none; padding: 3px 6px; color: #1566AB; background-color: #fff; border: solid 1px #fff; }
+.loginlist ul li a:hover { color: #fff; background-color: /* #d7e9ed*/#dddddd; border: solid 1px #bcd7de; }
+
+
+
+
+
+
+/* SPECIFIC ORMD STYLING STARTS HERE */
+/* 19/6/2006 - add a DidYouKnow-style to the Search menu box */
+
+/* clashes with bootstrap*/
+/*
+div.container {
+left: 0;
+width: 60%;
+border: solid 1px #bcd7de;
+background-color: transparent;
+font-size: 0.8em;
+z-index: 240;
+margin: 15px; 
+padding-top: 0; 
+padding-right: 10px; 
+padding-bottom: 10px; 
+padding-left: 10px; }
+
+div.container h3 {
+position: relative; 
+top: 0em; left: -65px; 
+margin: -12px 0 5px 0;
+padding-top: 3px; padding-bottom: 3px; 
+padding-left: 5px; 
+padding-right: 0.3em; 
+z-index: 290;
+width: 68%;
+font-weight: 320; 
+font-size: 10pt; 
+color: #000;
+background-color: #fff;
+
+border: none; 
+}
+    */
+
+/* Menu.asp styling */
+#table3 .login { padding: 3px; color: #000; text-align: right; font-weight: 500; }
+/*
+span.left {position: absolute; left: 40;}
+span.right {position: absolute; right: 0;}
+*/
+span.left {position: absolute; }
+span.right {position: absolute; }
+
+
+/* Styles the main search box in the Menu.asp file */
+.searchtable { margin: 0; padding: 0; width: 100%; background-color: #e8ede4; color: #000; border-collapse: separate; border: solid 1px #445c2c; }
+.searchtable hr { background-color: #445c2c; color: #445c2c; height: 1px; border: 0; margin-top: 10px; margin-bottom: 10px; }
+.searchtable th { text-align: left; /* width: 30%; */ font-size: 10pt; font-weight: 100; color: #000;  padding-left:10px; }
+.searchtable td { color: #000;  padding: 1px; text-align: left; }
+.searchtable input[type="radio"],
+.searchtable input[type="password"],
+.searchtable input[type="text"],
+.searchtable select { font-size: 10pt; font-weight: normal; border: solid 1px #ffcf00; text-align: left; margin: 3px; color: #000; background-color: #f8e9ad; }
+
+
+/* Styles the Administrator and Supervisor login table */
+.bluebox { margin: 3px 3px 3px 0; width: 98%; background-color: #dfe4db; color: #000; border-collapse: separate; border: solid 1px #445c2c; font-size: 1em; }
+.bluebox hr { color: #bcd7de; height: 1px; border: 0; margin-top: 10px; margin-bottom: 10px;}
+.bluebox .sublist { text-align: right; }
+.bluebox td { color: #000; }
+.bluebox th { text-align: right; width: 30%; font-size: 10pt; font-weight: 100; }
+.bluebox input[type="button"],
+.bluebox input[type="radio"],
+.bluebox input[type="password"],
+.bluebox input[type="text"],
+.bluebox select { font-size: 10pt; font-weight: normal; border: solid 1px #ffcf00; text-align: left; margin: 3px; color: #000; background-color: #f8e9ad; }
+
+
+
+/* resultsFrameFromAdmin.asp styling */
+/* This was also originally used for styling the locationSup.asp file - but have replaced with bluebox styling instead. */
+.searchResultsFromMenu .strong1 { font-size: 1.05em; font-weight: bolder; color: #000; background-color: #F8E9AD; font-size: 10pt; font-weight: bolder; }
+table.searchResultsFromMenu { border: solid 1px #fff; min-width: 760px; font-size: 11px; border-collapse: separate; background-color: #fff; text-align: left; }
+.searchResultsFromMenu strong { font-weight: bolder; }
+.searchResultsFromMenu td { font-size: 8pt; padding: 5px; background-color: #ebf2f4; color: #000; vertical-align: top; /* all rows was ddeef4 */}
+.searchResultsFromMenu td.facultyunitname { font-size: 8pt; text-align: left; width: 100%; color: #000; background-color: #f8e9ad; }
+.searchResultsFromMenu td.campus { font-size: 9pt; text-align: left; color: #ffffff; background-color: #0099cc;/* background-color: #6ed404; */ }
+.searchResultsFromMenu td.blank { background-color: #fff; }
+.searchResultsFromMenu th { font-size: 8pt; color: #fff; background-color: #dfe4db; text-align: center; vertical-align: middle; /* top row */}
+.searchResultsFromMenu tr { background-color: #c0c0c0; }
+.searchResultsFromMenu textarea { color: #000; background-color: #fff; font-size: 8pt; font-family: Verdana, Arial, sans-serif;}
+
+.searchResultsFromMenu th.actions { width: 9%; color: #000; font-size: 8pt; }
+.searchResultsFromMenu th.singleaction { width: 3%; color: #000; font-size: 8pt; }
+.searchResultsFromMenu th.qoraID { width: 3%; color: #000; font-size: 8pt; }
+.searchResultsFromMenu th.haztaskresult { width: 18%; color: #000; font-size: 8pt; }
+.searchResultsFromMenu th.assochazards { width: 18%;  color: #000; font-size: 8pt; }
+.searchResultsFromMenu th.currentcontrols { width: 18%;  color: #000; font-size: 8pt; }
+.searchResultsFromMenu th.risklevel { width: 5%;  color: #000; font-size: 8pt; }
+.searchResultsFromMenu th.furtheraction { width: 18%; color: #000; font-size: 8pt; }
+.searchResultsFromMenu th.renewaldate { width: 6%;  color: #000; font-size: 8pt; }
+.searchResultsFromMenu th.swms { width: 5%; color: #000; font-size: 8pt; }
+
+.searchResultsFromMenu thead .date { text-align: right; vertical-align: top; background-color: #fff; color: #000; vertical-align: top;}
+.searchResultsFromMenu thead { text-align: center; vertical-align: middle; background-color: blue; color: blue; }
+.searchResultsFromMenu h1 { font-size: 12pt; background-color: #fff; color: #000; vertical-align: top;}
+
+.searchResultsFromMenu thead td { text-align: center; background-color: #fff; color: #000; vertical-align: top; padding: 0; margin: 0;}
+.searchResultsFromMenu thead img { border: none; background-color: #fff; color: #000; }
+
+.topframe{color:#EDF4F6;}
+#content .topframe strong{color:#EDF4F6;}
+
+
+
+
+
+
+
+/* ReportSearchHeader.asp */
+/* The #rsh table styles the 'Print preview' and 'Return to search' buttons in the top of the ReportSearchHeader.asp */
+#rsh table { text-align: center; border: none; border-collapse: separate; }
+/*#rsh input[type="button"], #rsh input[type="submit"] { 
+font-size: 9pt; height: 13pt; font-weight: normal; border: solid 1px #ffcf00; text-align: center; margin: 3px; color: #000; background-color: #f8e9ad; } */
+
+/* Styles the 'Hazardous Task', 'Faculty/Unit', etc header table in ReportSearchHeader.asp */
+table#repsearchheader { border: none; margin: 0px; padding: 1px; width: 99%; text-align: left; /* line-height: 10px; */font-size: 9pt; }
+
+#repsearchheader th { min-width: 8%; padding: 2px; background-color: #f8e9ad; color: #000; font-weight: 100; vertical-align: middle; text-align: left; }
+
+#repsearchheader td { padding: 2px; background-color: #edf4f6; font-weight: 100; color: #000; vertical-align: middle; text-align: left; }
+
+table.searchResultsFromMenuPrint1 { font-size: 10pt; color: #000; background-color: #fff; border-collapse: separate; width: 100%; border: solid 1px black; }
+.searchResultsFromMenuPrint1 td { padding: 1px; }
+.searchResultsFromMenuPrint1 th { padding: 1px; background-color: #000; color: #fff; }
+
+.searchResultsFromMenuPrint1 thead { text-align: center; background-color: #fff; color: #000; }
+.searchResultsFromMenuPrint1 thead img { border: none; background-color: #fff; color: #000; }
+
+.searchResultsFromMenuPrint1 .date { text-align: center; font-size: 8px;  background-color: #000; color: #fff; }
+
+
+
+/* Styles the Administration menu in the admin.asp file using 3 floated columns in the frame  */
+#mainleft { width:33%; float:left; background:#fff; padding-bottom:10px; margin-top: 10px; }
+#maincenter { width:33%; float:left; background:#fff; padding-bottom:10px; margin-top: 10px; }
+#mainright { width:33%; float:left; background:#fff; padding-bottom:10px; margin-top: 10px; }
+
+#mainleft ul, #maincenter ul, #mainright ul { margin-left: 0; padding-left: 0; list-style-type: none; font-family: Arial, Helvetica, sans-serif; }
+
+#mainleft ul li a, #maincenter ul li a, #mainright ul li a,
+#mainleft ul li a:link, #mainleft ul li a:visited, #maincenter ul li a:link, 
+#maincenter ul li a:visited, #mainright ul li a:link, #mainright ul li a:visited
+{ display: block; padding: 3px; width: 160px;
+background-color: #EDF4F6;  border-bottom: 1px solid #eee; margin-bottom: 3px; text-decoration: none;  }
+
+#mainleft ul li a:hover, #maincenter ul li a:hover, #mainright ul li a:hover { background-color: #f8e9ad; text-decoration: none; margin-bottom: 3px;border-bottom: 1px solid #eee;}
+
+/* Styles the Administration functions */
+table.adminfn { margin: 0; padding: 0; width: 100%; background-color: #edf4f6; color: #000; border-collapse: separate; border: solid 1px #bcd7de; }
+.adminfn hr { background-color: #bcd7de; color: #bcd7de; height: 1px; border: 0; margin-top: 10px; margin-bottom: 10px; }
+.adminfn th { text-align: right; /* width: 30%; */ font-size: 10pt; font-weight: 100; color: #000; background-color: #edf4f6; padding: 3px; }
+.adminfn td { color: #000; background-color: #edf4f6; padding: 3px; text-align: left; }
+.adminfn input[type="radio"],
+.adminfn input[type="password"],
+.adminfn input[type="text"],
+.adminfn select { font-size: 10pt; font-weight: normal; border: solid 1px #ffcf00; text-align: left; margin: 3px; color: #000; background-color: #f8e9ad; }
+/* End of Administration functions styling */
+
+/* Styles the Administration functions */
+ul.adminfn { margin: 0; padding: 0; width: 55%; background-color: #edf4f6; color: #000; border-collapse: separate; border: solid 1px #bcd7de; }
+/* End of Administration functions styling */
+
+
+/* This styles the printable version of the SupRDateModified-print.asp file */
+div#declaration { display: none; }
+
+
+/* The print styles for the SupRDateModified-print.asp file */
+.suprreportheader-print { padding: 0; border: solid 1px #000; font-size: 11px; border-collapse: separate; background-color: #000; color: #fff; text-align: left; width: 40%;}
+.suprreportheader-print td, .suprreportheader-print th { padding: 5px 25px 5px 5px; background-color: #fff; color: #000; vertical-align: middle; }
+.suprreportheader-print th {background-color: #fff; color: #000; vertical-align: middle; font-weight: bold;}
+
+
+/* Print CSS for MyQORA table */
+.suprlevel-print { width: 99%; padding: 2px; border: solid 1px #000; font-size: 10px; border-collapse: collapse; text-align: left;}
+.suprlevel-print caption { font-size: 10px; text-align: left; color: #000; padding-left: 2px; padding-bottom: 0; margin-bottom: 2px; }
+.suprlevel-print strong { font-weight: bolder; }
+/* Width of the header columns for the first instance of this table */
+
+.suprlevel-print th { background-color: #000; color: #fff; padding: 5px; text-align: left; vertical-align: middle; font-size: 9pt; border: solid 1px black; }
+.suprlevel-print th.haztaskresult { width: 30%; }
+.suprlevel-print th.assochazards { width: 18%; }
+.suprlevel-print th.currentcontrols { width: 26%; }
+.suprlevel-print th.location { width: 37%; }
+.suprlevel-print th.risklevel { width: 9%; font-size: 8pt; }
+.suprlevel-print th.furtheraction { font-size: 8pt; }
+.suprlevel-print th.comments { font-size: 8pt; }
+.suprlevel-print th.dac { font-size: 8pt; }
+.suprlevel-print th.renewaldate { width: 9%; }
+
+.suprlevel-print td { padding: 5px; background-color: #fff; color: #000; vertical-align: top; border: solid 1px black;}
+
+
+table.mainprintable { border: solid 1px black; }
+/* table.mainprintable tr { background-color: #fff; color: #000; } */
+table.mainprintable h1 { font-size: 13pt; padding-top: 6px; vertical-align: middle; }
+table.mainprintable td.date { background-color: #fff; color: #000; font-size: 9pt; padding-top: 0; vertical-align: middle;}
+
+/******* TAB NAVIGATION **********/
+
+#tab-navigation-wrapper {
+ padding-top: 1px; 
+ width: 100%;
+ background: #072b38 url(images/topbg.gif) top left repeat-x;
+}
+
+#tab-navigation {
+background: #0099cc url(images/navigation_bg.png) top left repeat-x;
+height: 200px;
+width: 100%;
+min-width: 660px;
+/* max-width: 900px; */
+/*   margin-left: 40px;  */ 
+}
+
+#tab-nav{
+height: 37px;
+
+color: #62873d;
+font-size: 10px;
+line-height: 1.7em;
+}  
+
+#tab-nav span {
+text-transform: none;
+/* font-weight: normal; */
+}
+
+#tab-nav .lowercase {
+text-transform: lowercase;
+font-weight: bold;}
+
+#tab-nav ul {
+position: absolute; 
+margin: 0; 
+padding: 0; 
+list-style: none;
+}
+
+#tab-nav ul li {
+padding-top:12px;
+background: none; 
+float: left;
+margin: 0 2px 0 2px;
+
+}
+
+#tab-nav ul li.blank-group {
+position: absolute;
+margin: 0;
+}
+
+#tab-nav ul li.tab-env a:link, 
+#tab-nav ul li.tab-env a:visited, .envon{
+/* width: auto; */
+width:100px;
+
+}
+
+#tab-nav ul li.tab-erg a:link, 
+#tab-nav ul li.tab-erg a:visited, .ergon{
+/* width: auto; */
+width:140px;
+}
+
+#tab-nav ul li.tab-pla a:link, 
+#tab-nav ul li.tab-pla a:visited , .plaon{
+/* width: auto; */
+width:53px;
+}
+
+#tab-nav ul li.tab-ele a:link, 
+#tab-nav ul li.tab-ele a:visited, .eleon {
+/* width: auto; */
+width:92px;
+}
+
+#tab-nav ul li.tab-chm a:link, 
+#tab-nav ul li.tab-chm a:visited, .chmon {
+/* width: auto; */
+width:79px;
+}
+
+#tab-nav ul li.tab-bio a:link, 
+#tab-nav ul li.tab-bio a:visited,.bioon{
+/* width: auto; */
+width:97px;
+}
+
+#tab-nav ul li.tab-rad a:link, 
+#tab-nav ul li.tab-rad a:visited, .radon {
+/* width: auto; */
+width:88px;
+}
+
+
+/************/
+#tab-nav ul li.tab-elim a:link, 
+#tab-nav ul li.tab-elim a:visited, .elimon {
+/* width: auto; */
+width:230px;
+}
+
+#tab-nav ul li.tab-admin a:link, 
+#tab-nav ul li.tab-admin a:visited, .adminon {
+/* width: auto; */
+width:230px;
+}
+
+#tab-nav ul li.tab-ppa a:link, 
+#tab-nav ul li.tab-ppa a:visited, .ppaon {
+/* width: auto; */
+width:150px;
+}
+
+#tab-nav ul li.tab-emer a:link, 
+#tab-nav ul li.tab-emer a:visited, .emeron {
+/* width: auto; */
+width:150px;
+}
+
+#tab-nav ul li.tab-bio a:link, 
+#tab-nav ul li.tab-bio a:visited, 
+#tab-nav ul li.tab-pla a:link, 
+#tab-nav ul li.tab-pla a:visited, 
+#tab-nav ul li.tab-env a:link, 
+#tab-nav ul li.tab-env a:visited, 
+#tab-nav ul li.tab-erg a:link, 
+#tab-nav ul li.tab-erg a:visited, 
+#tab-nav ul li.tab-chm a:link, 
+#tab-nav ul li.tab-chm a:visited,
+#tab-nav ul li.tab-ele a:link, 
+#tab-nav ul li.tab-ele a:visited,
+#tab-nav ul li.tab-rad a:link, 
+#tab-nav ul li.tab-rad a:visited{
+display: block;
+text-align: center;
+padding: 2px 8px 2px 2px;
+color: #000;
+font-weight: bold;
+text-transform: uppercase;
+text-decoration: none;
+cursor: hand;
+max-width: 260px;
+height:40px;
+background: #fff url(images/navx.gif) bottom right no-repeat;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+}
+
+
+#tab-nav ul li.tab-bio a:hover, 
+#tab-nav ul li.tab-bio a:active, 
+#tab-nav ul li.tab-pla a:hover, 
+#tab-nav ul li.tab-pla a:active, 
+#tab-nav ul li.tab-env a:hover, 
+#tab-nav ul li.tab-env a:active, 
+#tab-nav ul li.tab-erg a:hover, 
+#tab-nav ul li.tab-erg a:active,
+#tab-nav ul li.tab-chm a:hover, 
+#tab-nav ul li.tab-chm a:active,
+#tab-nav ul li.tab-ele a:hover, 
+#tab-nav ul li.tab-ele a:active,
+#tab-nav ul li.tab-rad a:hover, 
+#tab-nav ul li.tab-rad a:active,
+#tab-nav ul li.tab-bio a:link.bioon, 
+#tab-nav ul li.tab-bio a:visited.bioon, 
+#tab-nav ul li.tab-pla a:link.plaon, 
+#tab-nav ul li.tab-pla a:visited.plaon, 
+#tab-nav ul li.tab-env a:link.envon, 
+#tab-nav ul li.tab-env a:visited.envon, 
+#tab-nav ul li.tab-erg a:link.ergon, 
+#tab-nav ul li.tab-erg a:visited.ergon,
+#tab-nav ul li.tab-chm a:link.chmon, 
+#tab-nav ul li.tab-chm a:visited.chmon,
+#tab-nav ul li.tab-ele a:link.eleon, 
+#tab-nav ul li.tab-ele a:visited.eleon,
+#tab-nav ul li.tab-rad a:link.radon, 
+#tab-nav ul li.tab-rad a:visited.radon{
+color: #fff; 
+border: none; 
+background: none; 
+padding: 2px 8px 7px 2px;
+background: #13576D url(images/tabs_active_corner2x.gif) top right no-repeat;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+/* position: absolute; */
+ margin-top: -4px; 
+}
+
+#tab-nav ul li.tab-elim a:link, 
+#tab-nav ul li.tab-elim a:visited,
+#tab-nav ul li.tab-admin a:link, 
+#tab-nav ul li.tab-admin a:visited,
+#tab-nav ul li.tab-ppa a:link, 
+#tab-nav ul li.tab-ppa a:visited,
+#tab-nav ul li.tab-emer a:link, 
+#tab-nav ul li.tab-emer a:visited{
+display: block;
+text-align: center;
+padding: 1px 8px 2px 2px;
+color: #000;
+font-weight: bold;
+text-transform: uppercase;
+text-decoration: none;
+cursor: hand;
+max-width: 260px;
+min-height: 40px;
+height:40px;
+background: #fff url(images/navx.gif) bottom right no-repeat;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+}
+
+#tab-nav ul li.tab-elim a:hover, 
+#tab-nav ul li.tab-elim a:active,
+#tab-nav ul li.tab-admin a:hover, 
+#tab-nav ul li.tab-admin a:active,
+#tab-nav ul li.tab-ppa a:hover, 
+#tab-nav ul li.tab-ppa a:active,
+#tab-nav ul li.tab-emer a:hover, 
+#tab-nav ul li.tab-emer a:active,
+#tab-nav ul li.tab-elim a:link.elimon, 
+#tab-nav ul li.tab-elim a:visited.elimon,
+#tab-nav ul li.tab-admin a:link.adminon, 
+#tab-nav ul li.tab-admin a:visited.adminon,
+#tab-nav ul li.tab-ppa a:link.ppaon, 
+#tab-nav ul li.tab-ppa a:visited.ppaon,
+#tab-nav ul li.tab-emer a:link.emeron, 
+#tab-nav ul li.tab-emer a:visited.emeron{
+color: #fff; 
+border: none; 
+background: none; 
+padding: 2px 8px 7px 2px;
+background: #13576D url(images/tabs_active_corner2x.gif) top right no-repeat;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+/* position: absolute; */
+ margin-top: -4px; 
+}
+
+
+/******* FIXED GROUP NAVIGATION *******/
+
+#tab-nav ul .section_list ul #groups, 
+#tab-nav ul .section_list ul .groups{
+height: 101px;
+}
+
+#group0, #group1, #group2, #group3, #group4, #group5, #group6,
+#groupc0, #groupc1, #groupc2, #groupc3{
+position: absolute; 
+padding-top: 20px; 
+margin: 18px 0 0 0; 
+width: 800px; 
+height: 100px;
+margin-left: -12%;
+}
+
+#group1 {
+margin-left: -33%;
+}
+
+#group2{
+margin-left: -42%;
+}
+
+#group3{
+margin-left: -56%;
+}
+
+#group4{
+margin-left: -67%;
+}
+
+#group5{
+margin-left: -83%;
+}
+
+#group6{
+margin-left: -96%;
+}
+
+
+#groupc0{
+margin-left: -27%;
+}
+
+#groupc1{
+margin-left: -56%;
+}
+
+#groupc2{
+margin-left: -76%;
+}
+
+#groupc3{
+margin-left: -97%;
+}
+
+
+.groups ul {
+margin: 0;
+padding: 5px 0px 5px 0;
+/* width: 657px; */
+width: 100%;
+text-transform: none;
+line-height: 1em;
+list-style-type: none;
+/* min-width: 657px; */
+/* max-width: 897px; */
+/* max-width: 1097px; */
+}
+
+.groups ul li {
+float: left; 
+font-size: 10px;
+width: 150px; 
+padding: 5px 25px 10px 0px; 
+margin-left: 3px; 
+background: transparent url(images/link_dot.gif) top left no-repeat;
+}
+
+.groups ul li a:link, 
+.groups ul li a:visited {
+padding-left: 15px; 
+color: #fff; 
+font-weight: normal;
+background: transparent url(images/link_dot.gif) top left no-repeat;
+font-weight: bold;
+}
+
+.groups ul li a:hover, 
+.groups ul li a:active {
+color: #fff; 
+background: transparent url(images/link_dot_active.gif) top left no-repeat;
+}
+
+.groups ul li#current_section a {
+background: transparent url(images/link_dot_active.gif) top left no-repeat;
+}
+
+.groups ul li#current_section a:link, 
+.groups ul li#current_section a:visited {
+color: #fff;
+}
+
+.groups ul li.current a {
+background: transparent url(images/link_dot_active.gif) top left no-repeat;
+}
+
+.groups ul li.current a:link, 
+.groups ul li.current a:visited {
+color: #fff;
 }
 
 
 
 
-#substancetable td {
-	vertical-align: top;
-}
+
