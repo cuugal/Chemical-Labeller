@@ -111,8 +111,8 @@ function chkgrp(btn)
 
 	<br />
 
-	<div id="contentp">
-	<h3>For Globally Harmonized System of Classification and Labelling of Chemicals (GHS)</h3>
+	<div id="contentzzz">
+	<h3>Globally Harmonized System of Classification and Labelling of Chemicals (GHS)</h3>
 	<p>You may search for a chemical below, subsequently modfy the details, or enter the details entirely manually.</p>
 		
 		<script language="JavaScript">

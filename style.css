@@ -337,10 +337,10 @@ body#printpreview { width: 100%; color: #000; background-color: #fff; font-famil
 #orrheading h1 { color: #0099cc;  font-size: 17pt; font-weight: bold; line-height: 17pt; margin: 0; top: 20px; padding: 40px 0 0 7px; }
 
 /* content */
-#content { color:#004d66; font-size: 10pt; padding: 5px 10px 10px 9px; margin-bottom: 0; background-color:#e8ede4 transparent;/* border-bottom: solid 1px #09c; */ }
+#content { color:#08262f; font-size: 11pt; padding: 5px 10px 10px 9px; margin-bottom: 0; background-color:#e8ede4 transparent;/* border-bottom: solid 1px #09c; */ }
 
 /* styles within the content DIV - top headings */
-#content p { font-size: 10pt; color: #4C8080; }
+#content p { font-size: 11pt; color: #4C8080; }
 #content h1 { font-size: 13pt; color: #fff;  }
 #content h1.pagetitle { font-size: 12pt; font-weight: bold; line-height: 10pt; margin-top: 0; padding-top: 2px; padding-left: 10px; background-image: url(images/pageheading_tile.gif); background-repeat: repeat-y; }
 #content h2 { font-size: 12pt; color: #0099cc;  }
