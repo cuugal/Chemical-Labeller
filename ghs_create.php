@@ -14,7 +14,7 @@ $a4 = imagecreatetruecolor(3508, 2480);
 $white = imagecolorallocate($a4, 255, 255, 255);
 $red = imagecolorallocate($a4, 255, 0, 0);
 $black = imagecolorallocate($a4, 0, 0, 0);
-$font = 'ARIAL.TTF';
+$font = __DIR__.'/ARIAL.TTF';
 imagefill($a4, 0, 0, $white);
 
 //border

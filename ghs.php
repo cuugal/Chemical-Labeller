@@ -6,7 +6,7 @@
 //*****************
 
 date_default_timezone_set('Australia/Sydney');
-
+ini_set('memory_limit', '4096M');
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
