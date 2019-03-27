@@ -203,7 +203,7 @@ function chkgrp(btn)
 			<h3>Add your own personal information in the fine print (optional):</h3>
 			<h3><input type="text" name="fineprint" size="75" value="Additional information is listed in the Safety Data Sheet"></h3>		
 			<h3>5: Go!</h3>
-			<input type="radio" name="output" value="prev" checked /> Preview<br />
+			<input type="radio" name="output" value="prev" checked /> Preview (gif for copy-paste)<br />
 			<input type="radio" name="output" value="2lbl" /> 2 labels per A4 page (use Avery L7168 labels); PDF<br />
 			<input type="radio" name="output" value="8lbl" onclick="document.ghs_build.layout.checked=true;"/> 8 labels per A4 page (use Avery L7165 labels); PDF<br />
 			<input type='checkbox' name='layout' value='simple' /> Simple Layout (Doesn't print risk statements - Required for smaller 8 label output)<br /><br />

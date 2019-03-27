@@ -37,14 +37,14 @@ else
   $simpleLayout = 0;
   
 
-// name 
+// name     was 180, 140, 110 
 $subst = $_POST['subst'];
 $subst = str_replace(array("\r", "\n"), '', $subst);	// strip newlines (they are already sperated by a semicolon anyway)
 $len = strlen($subst);
 if ($len <= 15)
-	$nameSize = 180;
+	$nameSize = 220;
 else if ($len <= 30)
-	$nameSize = 140;
+	$nameSize = 160;
 else 
 	$nameSize = 110;
 	
@@ -56,13 +56,13 @@ else
 imagettftext($a4, $nameSize, 0, 175, $substy,  $black, $font, $subst);
 
 
-// pictograms
+// pictograms was x360, y480
 if (isset($_POST['picto']))	{
 	
 	if ($simpleLayout) {
 		
-		$pictox = 360;
-		$pictoy = 480;
+		$pictox = 380;
+		$pictoy = 500;
 		$i=0;
 		foreach($_POST['picto'] as $value) 
 		{
@@ -84,9 +84,12 @@ if (isset($_POST['picto']))	{
 		$pictox = 150;
 		foreach($_POST['picto'] as $value) {
 			$temp = imagecreatefromgif('./img/ghs/gif/'.$value.'.gif');
-			//imagecopy($a4, $temp, $pictox, $pictoy, 0, 0, 720, 720);
-			imagecopyresized($a4, $temp, $pictox, 400, 0, 0, 600, 600, 720, 720);
-			$pictox += 631;
+			//imagecopy($a4, $temp, $pictox, $pictoy, 0, 0, 720, 720); 
+			//imagecopyresized($a4, $temp, $pictox, 400, 0, 0, 600, 600, 720, 720);
+			imagecopyresized($a4, $temp, $pictox, 400, 0, 0, 640, 640, 720, 720);
+
+			//$pictox += 631;
+			$pictox += 655;
 		}
 	}
 
@@ -95,9 +98,9 @@ if (isset($_POST['picto']))	{
 // signal word
 $signl = $_POST['signl'];
 if ($simpleLayout) {
-	imagettftext($a4, 200, 0, 1150, 2200,  $red, $font, $signl);
+	imagettftext($a4, 260, 0, 1150, 2200,  $red, $font, $signl);
 } else { 
-	imagettftext($a4, 120, 0, 1350, 1250,  $red, $font, $signl);
+	imagettftext($a4, 220, 0, 1150, 1350,  $red, $font, $signl);
 }
 
 
@@ -108,10 +111,10 @@ if (!$simpleLayout) {
 	$stmnt = str_replace("\n", '; ', $stmnt);	// Convert newlines to semicolons
 	$stmntx = 175;
 	$stmnty = 1525;
-	$textArray = explode('|', wordwrap($stmnt,80,'|'));
+	$textArray = explode('|', wordwrap($stmnt,65,'|')); // width of text
 	foreach ($textArray as $txt)	{
-		imagettftext($a4, 65, 0, $stmntx, $stmnty,  $black, $font, $txt);
-		$stmnty += 120;
+		imagettftext($a4, 80, 0, $stmntx, $stmnty,  $black, $font, $txt);  //font size
+		$stmnty += 120; //line spaceing
 	}
 }
 
