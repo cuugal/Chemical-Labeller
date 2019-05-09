@@ -9,7 +9,8 @@ date_default_timezone_set('Australia/Sydney');
 
 // Start image file and place text and labels
 ini_set("memory_limit","256M");
-$a4 = imagecreatetruecolor(3508, 2480);
+//$a4 = imagecreatetruecolor(3508, 2480);
+$a4 = imagecreatetruecolor(4464, 2480);
 
 $white = imagecolorallocate($a4, 255, 255, 255);
 $red = imagecolorallocate($a4, 255, 0, 0);
@@ -42,18 +43,18 @@ $subst = $_POST['subst'];
 $subst = str_replace(array("\r", "\n"), '', $subst);	// strip newlines (they are already sperated by a semicolon anyway)
 $len = strlen($subst);
 if ($len <= 15)
-	$nameSize = 220;
+	$nameSize = 280;
 else if ($len <= 30)
-	$nameSize = 160;
+	$nameSize = 200;
 else 
-	$nameSize = 110;
+	$nameSize = 160;
 	
 if ($simpleLayout)
-	$substy = 350;
+	$substy = 370;
 else
-	$substy = 250;
-
-imagettftext($a4, $nameSize, 0, 175, $substy,  $black, $font, $subst);
+	$substy = 320;
+// colour, size, angle, x displacement, y displacement,  ,  
+imagettftext($a4, $nameSize, 0, 110, $substy,  $black, $font, $subst);
 
 
 // pictograms was x360, y480
@@ -86,10 +87,10 @@ if (isset($_POST['picto']))	{
 			$temp = imagecreatefromgif('./img/ghs/gif/'.$value.'.gif');
 			//imagecopy($a4, $temp, $pictox, $pictoy, 0, 0, 720, 720); 
 			//imagecopyresized($a4, $temp, $pictox, 400, 0, 0, 600, 600, 720, 720);
-			imagecopyresized($a4, $temp, $pictox, 400, 0, 0, 640, 640, 720, 720);
+			imagecopyresized($a4, $temp, $pictox, 400, 0, 0, 700, 700, 720, 720);
 
 			//$pictox += 631;
-			$pictox += 655;
+			$pictox += 700;
 		}
 	}
 
@@ -110,11 +111,11 @@ if (!$simpleLayout) {
 	$stmnt = str_replace("\r", '', $stmnt);	// delete  carriage return
 	$stmnt = str_replace("\n", '; ', $stmnt);	// Convert newlines to semicolons
 	$stmntx = 175;
-	$stmnty = 1525;
-	$textArray = explode('|', wordwrap($stmnt,65,'|')); // width of text
+	$stmnty = 1625;
+	$textArray = explode('|', wordwrap($stmnt,69,'|')); // width of text
 	foreach ($textArray as $txt)	{
-		imagettftext($a4, 80, 0, $stmntx, $stmnty,  $black, $font, $txt);  //font size
-		$stmnty += 120; //line spaceing
+		imagettftext($a4, 100, 0, $stmntx, $stmnty,  $black, $font, $txt);  //font size
+		$stmnty += 145; //line spaceing
 	}
 }
 
