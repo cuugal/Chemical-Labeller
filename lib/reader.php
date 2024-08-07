@@ -67,7 +67,7 @@ if (!function_exists('file_get_contents')) {
     }
 }
 
-
+#[\AllowDynamicProperties]
 //class Spreadsheet_Excel_Reader extends PEAR {
 class Spreadsheet_Excel_Reader {
 
@@ -406,8 +406,8 @@ class Spreadsheet_Excel_Reader {
                                 	$formatstr = $this->formatRecords[$indexCode];
                                 //echo '.other.';
                                 //echo "\ndate-time=$formatstr=\n";
-                                if ($formatstr)
-                                if (preg_match("/[^hmsday\/\-:\s]/i", $formatstr) == 0) { // found day and time format
+                                //if ($formatstr)
+                                if (isset($formatstr) && preg_match("/[^hmsday\/\-:\s]/i", $formatstr) == 0) { // found day and time format
                                     $isdate = TRUE;
                                     $formatstr = str_replace('mm', 'i', $formatstr);
                                     $formatstr = str_replace('h', 'H', $formatstr);

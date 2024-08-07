@@ -29,6 +29,7 @@ function GetInt4d($data, $pos)
     }
     return $value;
 }
+#[\AllowDynamicProperties]
 class OLERead {
     var $data = '';
 
