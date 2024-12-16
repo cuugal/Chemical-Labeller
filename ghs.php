@@ -143,8 +143,8 @@ function chkgrp(btn)
 				$file_handle = fopen("./data/GHS_pictograms.csv", "r");
 				while (!feof($file_handle) ) 
 				{
-					$rowArr = fgetcsv($file_handle, 1024);
-					if (isset($rowArr[0]) && substr( $rowArr[0], 0,3) === "GHS")	// sanity
+                    $rowArr = fgetcsv($file_handle, 1024, ",", "\"", "\\");
+                    if (isset($rowArr[0]) && substr( $rowArr[0], 0,3) === "GHS")	// sanity
 					{
 						echo "<table style='float: left; width:75px; white-space:pre; border: 0px solid black;'>
 								<tr><td><img src='./img/ghs/gif/{$rowArr[1]}.gif' alt='{$rowArr[3]}' title='{$rowArr[2]}' height='70' width='70' align='top' /></td></tr>
